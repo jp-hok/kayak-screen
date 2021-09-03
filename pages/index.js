@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
+
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -9,14 +10,29 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <header className={styles.footer}>
+        <a
+            href="https://www.kayak.com"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+          <img src="/kayak.svg" alt="Kayak Logo" className={styles.logo} />
+        </a>
+      </header>
+
+
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Airlines
         </h1>
 
+        // comment code here
+
         <p className={styles.description}>
-          Get started by editing{' '}
+          Airlines
           <code className={styles.code}>pages/index.js</code>
+
         </p>
 
         <div className={styles.grid}>
@@ -50,16 +66,6 @@ export default function Home() {
         </div>
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
     </div>
   )
 }
