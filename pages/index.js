@@ -22,23 +22,26 @@ export default function Home() {
       </header>
 
 
+
       <main className={styles.main}>
         <h1 className={styles.title}>
           Airlines
         </h1>
-
-        // comment code here
+        <h1 className={styles.description}>
+          Filter by Alliances
+        </h1>
 
         <p className={styles.description}>
-          Airlines
           <code className={styles.code}>pages/index.js</code>
-
         </p>
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
+            <img src="/kayak.svg" alt="Kayak Logo" className={styles.avatar} />
             <h3>Documentation &rarr;</h3>
             <p>Find in-depth information about Next.js features and API.</p>
+            <p2>Testing</p2>
+
           </a>
 
           <a href="https://nextjs.org/learn" className={styles.card}>
