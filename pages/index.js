@@ -5,8 +5,14 @@ import Checkbox from "../components/Checkbox";
 
 
 export default function Home() {
-  return (
-      Checkbox()
+    const [checked, setChecked] = useState(false)
+
+    return (
+      <Checkbox
+        checked={checked}
+        onChange={(val) => setChecked(val)}
+        label={"Count me in!"}
+      />
 
     // <div className={styles.container}>
     //   <Head>
