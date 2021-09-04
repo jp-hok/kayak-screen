@@ -63,7 +63,9 @@
 }
 
 .title,
-.description {
+.description,
+.code
+.checkboxContainer{
   font-family: "Helvetica Neue";
   margin-left: 94px;
 }
@@ -71,18 +73,43 @@
 .description {
   margin-top: 73px;
   margin-bottom: 23px;
+  /*margin-bottom: 0px;*/
   font-size: 16px;
   font-weight: bold;
   color: #192024;
 }
 
+.checkboxContainer{
+  margin-left: 94px;
+}
+
+.checkbox{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  height: 50px;
+  max-height: 50px;
+  max-width: 20px;
+  margin-right: 10px;
+  margin-left: 0px;
+}
+
+.checkboxDescription{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 24px;
+  color: #192024;
+  font-family: "Helvetica Neue";
+  font-size: 14px;
+  font-weight: normal;
+}
+
+
 .code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+  /*color: #192024;*/
+  /*!*border-radius: 5px;*!*/
+  /*font-size: 14px;*/
+  /*font-weight: normal;*/
 }
 
 
