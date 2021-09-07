@@ -27,7 +27,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header className={styles.footer}>
+      <header className={styles.header}>
         <a
             href="https://www.kayak.com"
             target="_blank"

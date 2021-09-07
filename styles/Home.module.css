@@ -18,7 +18,7 @@
 
 }
 
-.footer {
+.header {
   width: 100%;
   height: 100%;
   background-color: #FFFFFF;
@@ -27,13 +27,13 @@
   /*align-items: center;*/
 }
 
-.footer img {
+.header img {
   margin-left: 16px;
   margin-bottom: 19px;
   margin-top:19px;
 }
 
-.footer a {
+.header a {
   /*display: flex;*/
   /*justify-content: center;*/
   /*align-items: center;*/
@@ -55,7 +55,7 @@
 }
 
 .title {
-  margin-top: 67px;
+  /*margin-top: 67px;*/
   font-size: 44px;
   font-weight: 900;
   font-family: "Helvetica Neue";
