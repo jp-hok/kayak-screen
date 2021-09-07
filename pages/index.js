@@ -3,16 +3,23 @@ import React, {useState} from "react";
 import styles from '../styles/Home.module.css'
 import Checkbox from "../components/Checkbox";
 
-
 export default function Home() {
     const [checked, setChecked] = useState(false)
 
     return (
-      <Checkbox
-        checked={checked}
-        onChange={(val) => setChecked(val)}
-        label={"Count me in!"}
-      />
+        <div className={styles.checkboxContainer}>
+              <Checkbox
+                checked={checked}
+                onChange={(val) => setChecked(val)}
+                label={"Count me in!"}
+              />
+
+              <Checkbox
+                    checked={checked}
+                    onChange={(val) => setChecked(val)}
+                    label={"Count me in!"}
+              />
+        </div>
 
     // <div className={styles.container}>
     //   <Head>

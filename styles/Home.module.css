@@ -65,7 +65,8 @@
 .title,
 .description,
 .code
-.checkboxContainer{
+{
+  display: flex;
   font-family: "Helvetica Neue";
   margin-left: 94px;
 }
@@ -80,6 +81,7 @@
 }
 
 .checkboxContainer{
+  display: inline-flex;
   margin-left: 94px;
 }
 
@@ -103,7 +105,6 @@
   font-size: 14px;
   font-weight: normal;
 }
-
 
 .code {
   /*color: #192024;*/
@@ -179,6 +180,8 @@
   float: left;
 
 }
+
+
 
 @media (max-width: 600px) {
   .grid {
