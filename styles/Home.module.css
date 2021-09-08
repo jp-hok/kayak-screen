@@ -11,12 +11,13 @@
 }
 
 .title,
-.description,
-.code
+.description
 {
   display: flex;
   font-family: "HelveticaNeue";
+  margin-top: 67px;
   margin-left: 94px;
+  margin-bottom: 0px;
 }
 
 .title {
@@ -36,6 +37,7 @@
 .checkboxContainer{
   display: inline-flex;
   margin-left: 94px;
+
 }
 
 .grid {
