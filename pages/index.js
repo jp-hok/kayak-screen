@@ -74,48 +74,109 @@ export default function Home() {
             >
           </CardContent>
 
+          <CardContent
+              imageSrc={"/aa-logo.svg"}
+              airlineName={"Delta"}
+              allianceName={""}
+              website={""}
+              phoneNum={""}
+          >
+          </CardContent>
+
+          <CardContent
+              imageSrc={"/aa-logo.svg"}
+              airlineName={"Ukraine International Airlines"}
+              allianceName={""}
+              website={""}
+              phoneNum={""}
+          >
+          </CardContent>
+
+          <CardContent
+              imageSrc={"/aa-logo.svg"}
+              airlineName={"ANA"}
+              allianceName={""}
+              website={""}
+              phoneNum={""}
+          >
+          </CardContent>
+
+          <CardContent
+              imageSrc={"/aa-logo.svg"}
+              airlineName={"Emirates"}
+              allianceName={""}
+              website={""}
+              phoneNum={""}
+          >
+          </CardContent>
+
+          <CardContent
+              imageSrc={"/aa-logo.svg"}
+              airlineName={"Lufthansa"}
+              allianceName={""}
+              website={""}
+              phoneNum={""}
+          >
+          </CardContent>
+
+          <CardContent
+              imageSrc={"/aa-logo.svg"}
+              airlineName={"Singapore Airlines"}
+              allianceName={""}
+              website={""}
+              phoneNum={""}
+          >
+          </CardContent>
+
+          <CardContent
+              imageSrc={"/aa-logo.svg"}
+              airlineName={"Ukraine International Airlines"}
+              allianceName={"Star Alliance"}
+              website={"flyuia.com"}
+              phoneNum={"+1 800 876-0114"}
+          >
+          </CardContent>
+
+          <CardContent
+              imageSrc={"/aa-logo.svg"}
+              airlineName={"Finnair"}
+              allianceName={""}
+              website={""}
+              phoneNum={""}
+          >
+          </CardContent>
+
+          <CardContent
+              imageSrc={"/aa-logo.svg"}
+              airlineName={"Alaska Airlines (AS)"}
+              allianceName={"Oneworld"}
+              website={"alaskaair.com"}
+              phoneNum={"+1 800 252 7522"}
+          >
+          </CardContent>
+
+          <CardContent
+              imageSrc={"/aa-logo.svg"}
+              airlineName={"Avianca"}
+              allianceName={""}
+              website={""}
+              phoneNum={""}
+          >
+          </CardContent>
+
+          <CardContent
+              imageSrc={"/aa-logo.svg"}
+              airlineName={"Swiss"}
+              allianceName={""}
+              website={""}
+              phoneNum={""}
+          >
+          </CardContent>
 
 
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <div className={styles.avatar}>
-              <img src="/aa-logo.svg" alt="Kayak Logo" className={styles.avatar} />
-            </div>
 
-            <div >
-              <h3>Documentation &rarr;</h3>
-              <p>Find in-depth information about Next.js features and API.</p>
-              <p2>Testing</p2>
-            </div>
 
-          </a>
 
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <div className={styles.avatar}>
-              <img src="/aa-logo.svg" alt="Kayak Logo" className={styles.avatar} />
-            </div>
-
-            {/*classname = holder*/}
-            <div >
-              <h3>Documentation &rarr;</h3>
-              <p>Find in-depth information about Next.js features and API.</p>
-              <p2>Testing</p2>
-            </div>
-
-          </a>
-
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <div className={styles.avatar}>
-              <img src="/aa-logo.svg" alt="Kayak Logo" className={styles.avatar} />
-            </div>
-
-            {/*classname = holder*/}
-            <div >
-              <h3>Documentation &rarr;</h3>
-              <p>Find in-depth information about Next.js features and API.</p>
-              <p2>Testing</p2>
-            </div>
-
-          </a>
 
 
 
