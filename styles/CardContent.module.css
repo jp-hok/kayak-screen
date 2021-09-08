@@ -1,0 +1,50 @@
+.card {
+    /*max-width: 300px;*/
+    /*max-height: 240px;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 240px;
+    background-color: #FFFFFF;
+    margin: 16px;
+    /*flex-basis: 45%;*/
+    padding: 1.5rem;
+    /*text-align: left;*/
+    color: #192024;
+    text-decoration: none;
+    font-family: "Helvetica Neue";
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.card:hover,
+.card:focus,
+.card:active {
+    border-color: #192024;
+}
+
+.title
+.sub-title
+.phone
+.web{
+    font-family: HelveticaNeue;
+    color: #192024;
+}
+
+.title{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.avatar {
+    /*position:fixed;*/
+    height: 120px;
+    width: 64px;
+    margin-right: 18px;
+    /*height: 1em;*/
+    float: left;
+}

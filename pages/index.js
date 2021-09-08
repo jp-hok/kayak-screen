@@ -2,6 +2,7 @@ import Head from 'next/head'
 import React, {useState} from "react";
 import styles from '../styles/Home.module.css'
 import Checkbox from "../components/Checkbox";
+import CardContent from "../components/CardContent";
 
 export default function Home() {
     const [checked, setChecked] = useState(false)
@@ -62,6 +63,19 @@ export default function Home() {
 
 
         <div className={styles.grid}>
+
+
+          <CardContent
+            imageSrc={"/aa-logo.svg"}
+            airlineName={"American Airlines"}
+            allianceName={""}
+            website={""}
+            phoneNum={""}
+            >
+          </CardContent>
+
+
+
           <a href="https://nextjs.org/docs" className={styles.card}>
             <div className={styles.avatar}>
               <img src="/aa-logo.svg" alt="Kayak Logo" className={styles.avatar} />
