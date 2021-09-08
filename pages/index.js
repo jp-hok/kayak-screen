@@ -8,19 +8,6 @@ export default function Home() {
     const [checked, setChecked] = useState(false)
 
     return (
-        // <div className={styles.checkboxContainer}>
-        //       <Checkbox
-        //         checked={checked}
-        //         onChange={(val) => setChecked(val)}
-        //         label={"One World"}
-        //       />
-        //
-        //       <Checkbox
-        //             checked={checked}
-        //             onChange={(val) => setChecked(val)}
-        //             label={"Skyteam"}
-        //       />
-        // </div>
 
     <div className={styles.container}>
       <Head>
@@ -39,9 +26,7 @@ export default function Home() {
         </a>
       </header>
 
-
-
-      <main className={styles.main}>
+        <main className={styles.main}>
         <h1 className={styles.title}>
           Airlines
         </h1>
@@ -52,9 +37,14 @@ export default function Home() {
         {/*<code className={styles.code}></code>*/}
 
           <checkboxcontainer className={styles.checkboxContainer} >
-            <input className={styles.checkbox} type={"checkbox"} />
-            <label className={styles.checkboxDescription}> OneWorld</label>
-            <span class={styles.checkbox}></span>
+
+            <Checkbox label = "OneWorld"></Checkbox>
+            <Checkbox label = "Sky Team"></Checkbox>
+            <Checkbox label = "Star Alliance"></Checkbox>
+
+            {/*<input className={styles.checkbox} type={"checkbox"} />*/}
+            {/*<label className={styles.checkboxDescription}> OneWorld</label>*/}
+            {/*<span class={styles.checkbox}></span>*/}
           {/*  <input className={styles.checkbox} type={"checkbox"} />*/}
           {/*  <label className={styles.checkboxDescription}> Sky Team</label>*/}
           {/*  <input className={styles.checkbox} type={"checkbox"} />*/}
@@ -173,15 +163,9 @@ export default function Home() {
           >
           </CardContent>
 
-
-
-
-
-
-
-
-
         </div>
+
+
       </main>
 
     </div>
