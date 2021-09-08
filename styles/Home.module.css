@@ -43,7 +43,7 @@
 
 .title a {
   color: #000000;
-  font-family: "Helvetica Neue";
+  font-family: "HelveticaNeue";
   font-size: 44px;
   font-weight: 900;
   text-decoration: none;
@@ -60,7 +60,7 @@
   /*margin-top: 67px;*/
   font-size: 44px;
   font-weight: 900;
-  font-family: "Helvetica Neue";
+  font-family: "HelveticaNeue";
   color: #000000;
 }
 
@@ -69,7 +69,7 @@
 .code
 {
   display: flex;
-  font-family: "Helvetica Neue";
+  font-family: "HelveticaNeue";
   margin-left: 94px;
 }
 

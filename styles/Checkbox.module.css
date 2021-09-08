@@ -1,14 +1,8 @@
 .checkbox{
     display: flex;
-    /*align-items: center;*/
-    /*padding: 1px;*/
-    /*margin-left: 94px;*/
-    /*margin-bottom: 40px;*/
 }
 
-/*.checkbox*/
 .border{
-    /*position: absolute;*/
     color: gray;
     border: 1px solid;
     border-radius: 4px;
