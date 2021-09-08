@@ -5,11 +5,12 @@ export default function CardContent({imageSrc,airlineName,allianceName,phoneNum,
 
     return(
         <a href="https://nextjs.org/docs" className={styles.card}>
-            <div className={styles.avatar}>
+
+            <div className={styles.avatarContainer}>
                 <img src={imageSrc} alt="Kayak Logo" className={styles.avatar} />
             </div>
 
-            <div >
+            <div className={styles.contactContainer}>
                 <div className={styles.title}>{airlineName}</div>
                 <div className={styles.subTitle}>{allianceName}</div>
                 <div className={styles.phone}>{phoneNum}</div>

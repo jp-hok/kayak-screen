@@ -37,9 +37,18 @@
     color: #5A6872;
 }
 
+.contactContainer{
+    word-wrap: break-word;
+    width: 150px;
+}
+
+.avatarContainer{
+    float: left;
+}
+
 .avatar {
-    height: 120px;
-    width: 64px;
     margin-right: 18px;
+    max-height: 120px;
+    max-width: 30px;
     float: left;
 }

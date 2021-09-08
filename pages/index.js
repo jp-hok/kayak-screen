@@ -32,7 +32,7 @@ export default function Home() {
         <div className={styles.grid}>
 
           <CardContent
-            imageSrc={"/aa-logo.svg"}
+            imageSrc={"/airline.svg"}
             airlineName={"American Airlines"}
             allianceName={""}
             website={""}
@@ -41,7 +41,7 @@ export default function Home() {
           </CardContent>
 
           <CardContent
-              imageSrc={"/aa-logo.svg"}
+              imageSrc={"/airline.svg"}
               airlineName={"Delta"}
               allianceName={""}
               website={""}
@@ -50,7 +50,7 @@ export default function Home() {
           </CardContent>
 
           <CardContent
-              imageSrc={"/aa-logo.svg"}
+              imageSrc={"/airline.svg"}
               airlineName={"Ukraine International Airlines"}
               allianceName={""}
               website={""}
@@ -59,7 +59,7 @@ export default function Home() {
           </CardContent>
 
           <CardContent
-              imageSrc={"/aa-logo.svg"}
+              imageSrc={"/airline.svg"}
               airlineName={"ANA"}
               allianceName={""}
               website={""}
@@ -68,7 +68,7 @@ export default function Home() {
           </CardContent>
 
           <CardContent
-              imageSrc={"/aa-logo.svg"}
+              imageSrc={"/airline.svg"}
               airlineName={"Emirates"}
               allianceName={""}
               website={""}
@@ -77,7 +77,7 @@ export default function Home() {
           </CardContent>
 
           <CardContent
-              imageSrc={"/aa-logo.svg"}
+              imageSrc={"/airline.svg"}
               airlineName={"Lufthansa"}
               allianceName={""}
               website={""}
@@ -86,7 +86,7 @@ export default function Home() {
           </CardContent>
 
           <CardContent
-              imageSrc={"/aa-logo.svg"}
+              imageSrc={"/airline.svg"}
               airlineName={"Singapore Airlines"}
               allianceName={""}
               website={""}
@@ -95,8 +95,8 @@ export default function Home() {
           </CardContent>
 
           <CardContent
-              imageSrc={"/aa-logo.svg"}
-              airlineName={"Ukraine International Airlines"}
+              imageSrc={"/airline.svg"}
+              airlineName={"Ukraine International Airlines (UIA)"}
               allianceName={"Star Alliance"}
               website={"flyuia.com"}
               phoneNum={"+1 800 876-0114"}
@@ -104,7 +104,7 @@ export default function Home() {
           </CardContent>
 
           <CardContent
-              imageSrc={"/aa-logo.svg"}
+              imageSrc={"/airline.svg"}
               airlineName={"Finnair"}
               allianceName={""}
               website={""}
@@ -113,7 +113,7 @@ export default function Home() {
           </CardContent>
 
           <CardContent
-              imageSrc={"/aa-logo.svg"}
+              imageSrc={"/airline.svg"}
               airlineName={"Alaska Airlines (AS)"}
               allianceName={"Oneworld"}
               website={"alaskaair.com"}
@@ -122,7 +122,7 @@ export default function Home() {
           </CardContent>
 
           <CardContent
-              imageSrc={"/aa-logo.svg"}
+              imageSrc={"/airline.svg"}
               airlineName={"Avianca"}
               allianceName={""}
               website={""}
@@ -131,7 +131,7 @@ export default function Home() {
           </CardContent>
 
           <CardContent
-              imageSrc={"/aa-logo.svg"}
+              imageSrc={"/airline.svg"}
               airlineName={"Swiss"}
               allianceName={""}
               website={""}
