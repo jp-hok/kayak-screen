@@ -12,13 +12,6 @@
   flex-direction: column;
 }
 
-.title {
-  font-size: 44px;
-  font-weight: 900;
-  font-family: "HelveticaNeue";
-  color: #000000;
-}
-
 .title,
 .description,
 .code
@@ -26,6 +19,12 @@
   display: flex;
   font-family: "HelveticaNeue";
   margin-left: 94px;
+}
+
+.title {
+  font-size: 44px;
+  font-weight: 900;
+  color: #000000;
 }
 
 .description {

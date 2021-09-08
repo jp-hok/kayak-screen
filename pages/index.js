@@ -23,15 +23,13 @@ export default function Home() {
 
           <checkboxcontainer className={styles.checkboxContainer} >
 
-            <Checkbox label = "OneWorld"></Checkbox>
-            <Checkbox label = "Sky Team"></Checkbox>
-            <Checkbox label = "Star Alliance"></Checkbox>
+            <Checkbox label = "Oneworld"/>
+            <Checkbox label = "Sky Team"/>
+            <Checkbox label = "Star Alliance"/>
 
           </checkboxcontainer>
 
-
         <div className={styles.grid}>
-
 
           <CardContent
             imageSrc={"/aa-logo.svg"}
@@ -39,7 +37,7 @@ export default function Home() {
             allianceName={""}
             website={""}
             phoneNum={""}
-            >
+          >
           </CardContent>
 
           <CardContent

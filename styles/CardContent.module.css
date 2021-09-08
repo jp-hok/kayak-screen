@@ -25,11 +25,16 @@
 .web{
     font-family: HelveticaNeue;
     color: #192024;
+    font-weight: normal;
 }
 
 .title{
     font-size: 16px;
     font-weight: bold;
+}
+
+.web{
+    color: #5A6872;
 }
 
 .avatar {
