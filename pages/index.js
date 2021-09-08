@@ -3,38 +3,23 @@ import React, {useState} from "react";
 import styles from '../styles/Home.module.css'
 import Checkbox from "../components/Checkbox";
 import CardContent from "../components/CardContent";
+import Header from "../components/Header";
 
 export default function Home() {
-    const [checked, setChecked] = useState(false)
 
     return (
 
     <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
 
-      <header className={styles.header}>
-        <a
-            href="https://www.kayak.com"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
+      <Header/>
 
-          <img src="/kayak.svg" alt="Kayak Logo" className={styles.logo} />
-        </a>
-      </header>
+      <main className={styles.main}>
 
-        <main className={styles.main}>
-        <h1 className={styles.title}>
-          Airlines
-        </h1>
-        <h1 className={styles.description}>
-          Filter by Alliances
-        </h1>
+          <h1 className={styles.title}>
+            Airlines</h1>
 
-        {/*<code className={styles.code}></code>*/}
+          <h1 className={styles.description}>
+            Filter by Alliances</h1>
 
           <checkboxcontainer className={styles.checkboxContainer} >
 
@@ -42,13 +27,6 @@ export default function Home() {
             <Checkbox label = "Sky Team"></Checkbox>
             <Checkbox label = "Star Alliance"></Checkbox>
 
-            {/*<input className={styles.checkbox} type={"checkbox"} />*/}
-            {/*<label className={styles.checkboxDescription}> OneWorld</label>*/}
-            {/*<span class={styles.checkbox}></span>*/}
-          {/*  <input className={styles.checkbox} type={"checkbox"} />*/}
-          {/*  <label className={styles.checkboxDescription}> Sky Team</label>*/}
-          {/*  <input className={styles.checkbox} type={"checkbox"} />*/}
-          {/*  <label className={styles.checkboxDescription}> Star Alliance</label>*/}
           </checkboxcontainer>
 
 
@@ -164,7 +142,6 @@ export default function Home() {
           </CardContent>
 
         </div>
-
 
       </main>
 
