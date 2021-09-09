@@ -40,6 +40,11 @@ export default function Home() {
     })
   }
 
+  function testingPOutput(){
+      getP()
+      return <h1>hello out </h1>
+  }
+
     return (
 
         <div>
