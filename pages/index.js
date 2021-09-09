@@ -10,92 +10,27 @@ let curArray;
 
 export default function Home() {
 
-
-
-    const useAsyncError = () => {
-        const [_, setError] = React.useState();
-        return React.useCallback(
-            e => {
-                setError(() => {
-                    throw e;
-                });
-            },
-            [setError],
-        );
-    };
-
-    let getEntry = async function(){
-
-        console.log('hello inside')
-        // const [data, setData] = useState(null);
-        // const throwError = useAsyncError();
-
-        return await fetchJsonp('https://www.kayak.com/h/mobileapis/directory/airlines/homework.jsonp', {
-            jsonpCallback: 'jsonp',
-        }).then(
-            async function (response){
-                console.log('hello')
-                console.log(response.json())
-                let responseJsonFiltered = await Object.values(response.json()).filter( ( element => element.alliance =="ST"))
-                console.log(responseJsonFiltered)
-                return(responseJsonFiltered)
-            }
-
-        ).catch(function(ex) {
-            console.log('parsing failed', ex)
-        })
-
-    }
-
-    // https://www.kayak.com/h/mobileapis/directory/airlines/homework?jsonp=jsonp
   function getP(){
 
   return fetchJsonp('https://www.kayak.com/h/mobileapis/directory/airlines/homework.jsonp', {
       jsonpCallback: 'jsonp',
     })
         .then(function(response) {
-
-            //json.filter
-            // let responseJson = response.json()
-            // let responseJsonFiltered = Object.values(responseJson).filter( ( element => element.alliance =="ST"))
-            // console.log("first" + responseJsonFiltered)
             return response.json()
-            //return responseJsonFiltered
         }
         ).then(function(json) {
-        //console.log('parsed json', json)
-        //console.log(json)
-        //console.log(json[0])
-        let test = json
 
-        //json.filter
-        let result = Object.values(json).filter( ( element => element.alliance =="ST"))
-        console.log(result)
-        return result
-        ///console.log(test.orders.filter.( element => element.website =="yahoo"))
+            let result = Object.values(json).filter( ( element => element.alliance =="ST"))
+
+              console.log(result)
+
+              return result
     }
     )
         .catch(function(ex) {
       console.log('parsing failed', ex)
     }
     )
-  }
-
-  async function testingPOutput(){
-      // let result = getP()
-      //     .then(function(response) {
-      //   return response
-      // }
-      // )
-      // console.log("------------------------------")
-      // //console.log("-----------" + result )
-      // console.log(state)
-
-      const [data, setData] = React.useState(null);
-      const throwError = useAsyncError();
-
-      let something = await getEntry()
-      console.log(something)
   }
 
     function FetchOneResource() {
@@ -124,15 +59,12 @@ export default function Home() {
         if (errorA) return "Failed to load resource A";
         return loadingA ? "Loading..." : valueA;
     }
-
-
-
+    
     return (
 
         <div>
             hello
           {FetchOneResource()}
-            {/*{getEntry()}*/}
           {/*<CardContent/>*/}
             {console.log(curArray)}
             hello
