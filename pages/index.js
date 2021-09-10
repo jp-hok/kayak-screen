@@ -10,12 +10,12 @@ let curArray = [];
 
 export default function Home() {
 
-    const [starState, setStarState] = useState(0)
+    const [skyTeamState, setSkyTeamState] = useState(0)
     const [oneWorldState, setOneWorld] = useState(0)
     const [starAllianceState, setStarAllianceState] = useState(0)
 
     function getStates(){
-        if (starState == "true"){
+        if (skyTeamState == "true"){
             return FetchOneResource("Sky Team", "ST")
         }
         if (oneWorldState == "true"){
@@ -100,14 +100,6 @@ export default function Home() {
 
     return (
 
-        // <div>
-        //     hello
-        //   {FetchOneResource()}
-        //   {/*<CardContent/>*/}
-        //     {console.log(curArray)}
-        //     hello
-        // </div>
-
     <div className={styles.container}>
 
       <Header/>
@@ -122,15 +114,9 @@ export default function Home() {
 
           <checkboxcontainer className={styles.checkboxContainer} >
 
-            <Checkbox label = "Oneworld" onClick={ (value) => setStarState(value)}/>
-              {useEffect(
-                  () =>{
-                      console.log(starState + "-----star state")
-                  }
-
-              )}
-            <Checkbox label = "Sky Team"/>
-            <Checkbox label = "Star Alliance"/>
+            <Checkbox label = "Oneworld" onClick={ (value) => setOneWorld(value)}/>
+            <Checkbox label = "Sky Team" onClick={ (value) => setSkyTeamState(value)}/>
+            <Checkbox label = "Star Alliance" onClick={ (value) => setStarAllianceState(value)}/>
 
           </checkboxcontainer>
 
@@ -141,113 +127,7 @@ export default function Home() {
             {/*{getCardArrayElements()}*/}
             {/*{getCurArrayElements()}*/}
 
-          {/*<CardContent*/}
-          {/*  imageSrc={"/airline.svg"}*/}
-          {/*  airlineName={"American Airlines"}*/}
-          {/*  allianceName={""}*/}
-          {/*  website={""}*/}
-          {/*  phoneNum={""}*/}
-          {/*>*/}
-          {/*</CardContent>*/}
 
-          {/*<CardContent*/}
-          {/*    imageSrc={"/airline.svg"}*/}
-          {/*    airlineName={"Delta"}*/}
-          {/*    allianceName={""}*/}
-          {/*    website={""}*/}
-          {/*    phoneNum={""}*/}
-          {/*>*/}
-          {/*</CardContent>*/}
-
-          {/*<CardContent*/}
-          {/*    imageSrc={"/airline.svg"}*/}
-          {/*    airlineName={"Ukraine International Airlines"}*/}
-          {/*    allianceName={""}*/}
-          {/*    website={""}*/}
-          {/*    phoneNum={""}*/}
-          {/*>*/}
-          {/*</CardContent>*/}
-
-          {/*<CardContent*/}
-          {/*    imageSrc={"/airline.svg"}*/}
-          {/*    airlineName={"ANA"}*/}
-          {/*    allianceName={""}*/}
-          {/*    website={""}*/}
-          {/*    phoneNum={""}*/}
-          {/*>*/}
-          {/*</CardContent>*/}
-
-          {/*<CardContent*/}
-          {/*    imageSrc={"/airline.svg"}*/}
-          {/*    airlineName={"Emirates"}*/}
-          {/*    allianceName={""}*/}
-          {/*    website={""}*/}
-          {/*    phoneNum={""}*/}
-          {/*>*/}
-          {/*</CardContent>*/}
-
-          {/*<CardContent*/}
-          {/*    imageSrc={"/airline.svg"}*/}
-          {/*    airlineName={"Lufthansa"}*/}
-          {/*    allianceName={""}*/}
-          {/*    website={""}*/}
-          {/*    phoneNum={""}*/}
-          {/*>*/}
-          {/*</CardContent>*/}
-
-          {/*<CardContent*/}
-          {/*    imageSrc={"/airline.svg"}*/}
-          {/*    airlineName={"Singapore Airlines"}*/}
-          {/*    allianceName={""}*/}
-          {/*    website={""}*/}
-          {/*    phoneNum={""}*/}
-          {/*>*/}
-          {/*</CardContent>*/}
-
-          {/*<CardContent*/}
-          {/*    imageSrc={"/airline.svg"}*/}
-          {/*    airlineName={"Ukraine International Airlines (UIA)"}*/}
-          {/*    allianceName={"Star Alliance"}*/}
-          {/*    website={"flyuia.com"}*/}
-          {/*    phoneNum={"+1 800 876-0114"}*/}
-          {/*>*/}
-          {/*</CardContent>*/}
-
-          {/*<CardContent*/}
-          {/*    imageSrc={"/airline.svg"}*/}
-          {/*    airlineName={"Finnair"}*/}
-          {/*    allianceName={""}*/}
-          {/*    website={""}*/}
-          {/*    phoneNum={""}*/}
-          {/*>*/}
-          {/*</CardContent>*/}
-
-          {/*<CardContent*/}
-          {/*    imageSrc={"/airline.svg"}*/}
-          {/*    airlineName={"Alaska Airlines (AS)"}*/}
-          {/*    allianceName={"Oneworld"}*/}
-          {/*    website={"alaskaair.com"}*/}
-          {/*    phoneNum={"+1 800 252 7522"}*/}
-          {/*>*/}
-          {/*</CardContent>*/}
-
-          {/*<CardContent*/}
-          {/*    imageSrc={"/airline.svg"}*/}
-          {/*    airlineName={"Avianca"}*/}
-          {/*    allianceName={""}*/}
-          {/*    website={""}*/}
-          {/*    phoneNum={""}*/}
-          {/*>*/}
-          {/*</CardContent>*/}
-
-          {/*<CardContent*/}
-          {/*    imageSrc={"/airline.svg"}*/}
-          {/*    airlineName={"Swiss"}*/}
-          {/*    allianceName={""}*/}
-          {/*    website={""}*/}
-          {/*    phoneNum={""}*/}
-          {/*>*/}
-          {/*</CardContent>*/}
 
         </div>
 
