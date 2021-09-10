@@ -14,10 +14,18 @@ export default function Checkbox({ checked,onChange,label, onClick})
     //     console.log(isChecked)
     // }
 
-    const [isChecked, setIsChecked] = useState(false);
+    const [isChecked, setIsChecked] = useState(true);
     const toggleCheck = () => {
-        console.log(isChecked)
-        setIsChecked(!isChecked);
+        console.log("before checked---- " +isChecked)
+        if (isChecked == true){
+            setIsChecked(false)
+        }
+        else(
+            setIsChecked(true)
+        )
+
+        //setIsChecked(!isChecked);
+        console.log("after checked---- " +isChecked)
         return isChecked
     };
 

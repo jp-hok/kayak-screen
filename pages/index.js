@@ -7,7 +7,6 @@ import Header from "../components/Header";
 import fetchJsonp from "fetch-jsonp";
 
 let curArray = [];
-// let curArray;
 
 export default function Home() {
 
@@ -30,22 +29,13 @@ export default function Home() {
   }
 
     function getCurArrayElements(fullAllianceName, allianceCode){
-        console.log('----get here')
-        console.log(curArray)
-        console.log("----get out here")
-
         let result = Object.values(curArray);
-
-        if (initState == false){
-            setInitState(true)
-        }
 
         if (allianceCode != "") {
             result = Object.values(curArray).filter((element => element.alliance == allianceCode))
         }
-        console.log(result)
 
-        return result.slice(0,1).map((ele) => <CardContent
+        return result.slice(0,15).map((ele) => <CardContent
             imageSrc={"/airline.svg"}
             airlineName={ele.name}
             allianceName={fullAllianceName}
@@ -93,21 +83,21 @@ export default function Home() {
           </checkboxcontainer>
 
         <div className={styles.grid}>
-
-
+            
             {FetchOneResource("","ST")}
             {skyTeamState && starAllianceState && oneWorldState?  getCurArrayElements("","") : ""}
+            {initState? "hello" : <CardContent
+                imageSrc={"/airline.svg"}
+                airlineName={"Brandon Hok"}
+                allianceName={"Team Kayak"}
+                website={"brandon.hok@gmail.com"}
+                phoneNum={"571-310-1992"}
+            >
+            </CardContent>}
 
-
-
-            {skyTeamState?  "" : getCurArrayElements("Sky Team", "ST")}
+            {skyTeamState?  "" : getCurArrayElements("Sky Team", "ST") }
             {starAllianceState?  "" : getCurArrayElements("Star Alliance", "SA")}
             {oneWorldState? "" : getCurArrayElements("One World", "OW")}
-            {/*{getCardArrayElements()}*/}
-            {/*{getCurArrayElements()}*/}
-
-
-
 
         </div>
 
