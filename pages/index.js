@@ -55,30 +55,19 @@ export default function Home() {
     }
 
     function FetchOneResource(fullAllianceName, allianceCode) {
-        const [valueA, setValueA] = useState(null);
         const [errorA, setErrorA] = useState(null);
-        const [loadingA, setLoadingA] = useState(true);
         async function getA() {
             try {
-                setLoadingA(true);
-                console.log('hello------------')
                 const valueA = await getP(allianceCode);
                 curArray = valueA
-                // console.log(curArray)
             } catch (e) {
                 setErrorA(e);
                 console.log(e)
-            } finally {
-                setLoadingA(false);
             }
         }
         useEffect(() => {
             getA();
         }, []);
-
-        // if (errorA) return "Failed to load resource A";
-        // //return loadingA ? "Loading..." : valueA;
-        // return getCurArrayElements(fullAllianceName)
     }
 
     return (
