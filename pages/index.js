@@ -84,12 +84,12 @@ export default function Home() {
         <div className={styles.grid}>
             
             {FetchOneResource("","ST")}
-            {skyTeamState && starAllianceState && oneWorldState?  getCurArrayElements("","") : ""}
+            {skyTeamState && starAllianceStaten && oneWorldState?  getCurArrayElements("","") : ""}
             {initState? "hello" : <CardContent
                 imageSrc={"/airline.svg"}
                 airlineName={"Brandon Hok"}
                 allianceName={"Team Kayak"}
-                website={"brandon.hok@gmail.com"}
+                website={"www.linkedin.com/in/brandon-hok"}
                 phoneNum={"571-310-1992"}
             >
             </CardContent>}

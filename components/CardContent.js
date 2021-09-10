@@ -6,7 +6,7 @@ export default function CardContent({imageSrc,airlineName,allianceName,phoneNum,
     const [isShown, setIsShown] = useState(false)
 
     return(
-        <a href="https://nextjs.org/docs" className={styles.card}
+        <a href={website} className={styles.card}
             onMouseEnter={() => setIsShown(true)}
             onMouseLeave={() => setIsShown(false)}
         >

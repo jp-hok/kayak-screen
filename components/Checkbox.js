@@ -3,16 +3,8 @@ import styles from '../styles/Checkbox.module.css'
 
 
 
-export default function Checkbox({ checked,onChange,label, onClick})
-// const Checkbox = props =>
+export default function Checkbox({ label,onClick})
 {
-
-    // function onChange(val){
-    //     setIsChecked(val)
-    //     console.log("hello1")
-    //     toggleCheck()
-    //     console.log(isChecked)
-    // }
 
     const [isChecked, setIsChecked] = useState(true);
     const toggleCheck = () => {
