@@ -11,67 +11,27 @@ let curArray = [];
 
 export default function Home() {
 
-    const [skyTeamState, setSkyTeamState] = useState(0)
-    const [oneWorldState, setOneWorld] = useState(0)
-    const [starAllianceState, setStarAllianceState] = useState(0)
+    const [skyTeamState, setSkyTeamState] = useState(false)
+    const [oneWorldState, setOneWorld] = useState(false)
+    const [starAllianceState, setStarAllianceState] = useState(false)
 
-    function getStates(allianceCode){
-        // let result = Object.values(curArray).filter( ( element => element.alliance == allianceCode))
-
-        if (skyTeamState == "true"){
-            //getCurArrayElements(fullAllianceName)
-            // return FetchOneResource("Sky Team", "ST")
-            return getCurArrayElements("Sky Team")
-        }
-
-        return getCurArrayElements("Sky Team")
-        // if (oneWorldState == "true"){
-        //     return FetchOneResource("Oneworld", "OW")
-        // }
-        // if (starAllianceState == "true"){
-        //     return FetchOneResource("Star Alliance", "SA")
-        // }
-        // else{
-        //     FetchOneResource("", "")
-        // }
-        //
-        //
-        // return FetchOneResource("Star Alliances", "OW")
-    }
-
-    function getP(allianceCode){
+    function getP(){
 
   return fetchJsonp('https://www.kayak.com/h/mobileapis/directory/airlines/homework.jsonp', {
       jsonpCallback: 'jsonp',
     })
         .then(function(response) {
             return response.json()
-        }
-        )
-      // .then(function(json) {
-
-            // if (allianceCode == ""){
-            //     return json}
-            //
-            // else{
-            //     let result = Object.values(json).filter( ( element => element.alliance == allianceCode))
-            //     console.log(result)
-            //     return result
-            // }
-    // }
-    // )
+        })
         .catch(function(ex) {
       console.log('parsing failed', ex)
-    }
-    )
+    })
   }
 
-    function getCurArrayElements(fullAllianceName){
+    function getCurArrayElements(fullAllianceName, allianceCode){
         console.log('----get here')
         console.log(curArray)
         console.log("----get out here")
-
-        let allianceCode = "ST"
 
         let result = Object.values(curArray).filter( ( element => element.alliance == allianceCode))
         console.log(result)
@@ -94,7 +54,6 @@ export default function Home() {
                 setLoadingA(true);
                 console.log('hello------------')
                 const valueA = await getP(allianceCode);
-                // setValueA(JSON.stringify(valueA));
                 curArray = valueA
                 // console.log(curArray)
             } catch (e) {
@@ -137,16 +96,11 @@ export default function Home() {
 
         <div className={styles.grid}>
 
-            {/*{getStates()}*/}
+
             {FetchOneResource("","ST")}
-            {/*{*/}
-            {/*    useEffect(*/}
-            {/*        () =>*/}
-            {/*            getStates()*/}
-            {/*    )*/}
-            {/*}*/}
-            {skyTeamState? getCurArrayElements("Sky Team") : <h1> Hello </h1>}
-            {starAllianceState? getCurArrayElements("Star Alliance") : <h1> Hello </h1>}
+            {skyTeamState?  "" : getCurArrayElements("Sky Team", "ST")}
+            {starAllianceState?  "" : getCurArrayElements("Star Alliance", "SA")}
+            {oneWorldState? "" : getCurArrayElements("One World", "OW")}
             {/*{getCardArrayElements()}*/}
             {/*{getCurArrayElements()}*/}
 

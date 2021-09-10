@@ -26,6 +26,7 @@ export default function Checkbox({ checked,onChange,label, onClick})
             <div className={styles.border} onClick={event => onClick(toggleCheck()) }>
             {/*<div className={styles.border} onClick={() => onChange(!checked)}>*/}
                 {isChecked ? <div className={styles.indicator}></div> : ""}
+            {/*    {isChecked ? "" : <div className={styles.indicator}></div>}*/}
             </div>
 
             <div className={styles.checkboxLabel}>
