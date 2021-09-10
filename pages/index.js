@@ -10,7 +10,10 @@ let curArray = [];
 
 export default function Home() {
 
-  function getP(){
+    const [starState, setStarState] = useState(0)
+
+
+    function getP(){
 
   return fetchJsonp('https://www.kayak.com/h/mobileapis/directory/airlines/homework.jsonp', {
       jsonpCallback: 'jsonp',
@@ -45,7 +48,7 @@ export default function Home() {
         />)
     }
 
-    function FetchOneResource() {
+    function FetchOneResource(fullAllianceName, allianceCode) {
         const [valueA, setValueA] = useState(null);
         const [errorA, setErrorA] = useState(null);
         const [loadingA, setLoadingA] = useState(true);
@@ -70,7 +73,7 @@ export default function Home() {
 
         if (errorA) return "Failed to load resource A";
         //return loadingA ? "Loading..." : valueA;
-        return getCurArrayElements("Star Alliance")
+        return getCurArrayElements(fullAllianceName)
     }
 
     return (
@@ -97,7 +100,13 @@ export default function Home() {
 
           <checkboxcontainer className={styles.checkboxContainer} >
 
-            <Checkbox label = "Oneworld"/>
+            <Checkbox label = "Oneworld" onClick={ (value) => setStarState(value)}/>
+              {useEffect(
+                  () =>{
+                      console.log(starState + "-----star state")
+                  }
+
+              )}
             <Checkbox label = "Sky Team"/>
             <Checkbox label = "Star Alliance"/>
 
@@ -105,7 +114,7 @@ export default function Home() {
 
         <div className={styles.grid}>
 
-            {FetchOneResource()}
+            {FetchOneResource("Star Alliances")}
             {/*{getCardArrayElements()}*/}
             {/*{getCurArrayElements()}*/}
 
