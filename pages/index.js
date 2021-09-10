@@ -13,7 +13,7 @@ export default function Home() {
     const [starState, setStarState] = useState(0)
 
 
-    function getP(){
+    function getP(allianceCode){
 
   return fetchJsonp('https://www.kayak.com/h/mobileapis/directory/airlines/homework.jsonp', {
       jsonpCallback: 'jsonp',
@@ -23,7 +23,7 @@ export default function Home() {
         }
         ).then(function(json) {
 
-            let result = Object.values(json).filter( ( element => element.alliance =="ST"))
+            let result = Object.values(json).filter( ( element => element.alliance == allianceCode))
 
               console.log(result)
 
@@ -56,7 +56,7 @@ export default function Home() {
             try {
                 setLoadingA(true);
                 console.log('hello------------')
-                const valueA = await getP();
+                const valueA = await getP(allianceCode);
                 setValueA(JSON.stringify(valueA));
                 curArray = valueA
                 //console.log(curArray)
@@ -114,7 +114,7 @@ export default function Home() {
 
         <div className={styles.grid}>
 
-            {FetchOneResource("Star Alliances")}
+            {FetchOneResource("Star Alliances", "ST")}
             {/*{getCardArrayElements()}*/}
             {/*{getCurArrayElements()}*/}
 
