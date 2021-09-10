@@ -11,6 +11,7 @@ let curArray = [];
 
 export default function Home() {
 
+    const [initState, setInitState] = useState(false)
     const [skyTeamState, setSkyTeamState] = useState(false)
     const [oneWorldState, setOneWorld] = useState(false)
     const [starAllianceState, setStarAllianceState] = useState(false)
@@ -33,10 +34,18 @@ export default function Home() {
         console.log(curArray)
         console.log("----get out here")
 
-        let result = Object.values(curArray).filter( ( element => element.alliance == allianceCode))
+        let result = Object.values(curArray);
+
+        if (initState == false){
+            setInitState(true)
+        }
+
+        if (allianceCode != "") {
+            result = Object.values(curArray).filter((element => element.alliance == allianceCode))
+        }
         console.log(result)
 
-        return result.slice(0,15).map((ele) => <CardContent
+        return result.slice(0,1).map((ele) => <CardContent
             imageSrc={"/airline.svg"}
             airlineName={ele.name}
             allianceName={fullAllianceName}
@@ -98,6 +107,10 @@ export default function Home() {
 
 
             {FetchOneResource("","ST")}
+            {skyTeamState && starAllianceState && oneWorldState?  getCurArrayElements("","") : ""}
+
+
+
             {skyTeamState?  "" : getCurArrayElements("Sky Team", "ST")}
             {starAllianceState?  "" : getCurArrayElements("Star Alliance", "SA")}
             {oneWorldState? "" : getCurArrayElements("One World", "OW")}
