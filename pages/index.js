@@ -11,7 +11,26 @@ let curArray = [];
 export default function Home() {
 
     const [starState, setStarState] = useState(0)
+    const [oneWorldState, setOneWorld] = useState(0)
+    const [starAllianceState, setStarAllianceState] = useState(0)
 
+    function getStates(){
+        if (starState == "true"){
+            return FetchOneResource("Sky Team", "ST")
+        }
+        if (oneWorldState == "true"){
+            return FetchOneResource("Oneworld", "OW")
+        }
+        if (starAllianceState == "true"){
+            return FetchOneResource("Star Alliance", "SA")
+        }
+        else{
+            FetchOneResource("", "")
+        }
+
+
+        return FetchOneResource("Star Alliances", "OW")
+    }
 
     function getP(allianceCode){
 
@@ -23,11 +42,14 @@ export default function Home() {
         }
         ).then(function(json) {
 
-            let result = Object.values(json).filter( ( element => element.alliance == allianceCode))
+            if (allianceCode == ""){
+                return json}
 
-              console.log(result)
-
-              return result
+            else{
+                let result = Object.values(json).filter( ( element => element.alliance == allianceCode))
+                console.log(result)
+                return result
+            }
     }
     )
         .catch(function(ex) {
@@ -39,7 +61,7 @@ export default function Home() {
     function getCurArrayElements(fullAllianceName){
         console.log('----get here')
 
-        return curArray.map((ele) => <CardContent
+        return curArray.slice(0,15).map((ele) => <CardContent
             imageSrc={"/airline.svg"}
             airlineName={ele.name}
             allianceName={fullAllianceName}
@@ -114,7 +136,8 @@ export default function Home() {
 
         <div className={styles.grid}>
 
-            {FetchOneResource("Star Alliances", "ST")}
+            {/*{getStates()}*/}
+            {FetchOneResource("","ST")}
             {/*{getCardArrayElements()}*/}
             {/*{getCurArrayElements()}*/}
 
