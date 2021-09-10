@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import React, {useState, useEffect} from "react";
 import styles from '../styles/Home.module.css'
 import Checkbox from "../components/Checkbox";
@@ -35,7 +34,7 @@ export default function Home() {
             result = Object.values(curArray).filter((element => element.alliance == allianceCode))
         }
 
-        return result.slice(0,15).map((ele) => <CardContent
+        return result.slice(0,20).map((ele) => <CardContent
             imageSrc={"/airline.svg"}
             airlineName={ele.name}
             allianceName={fullAllianceName}
