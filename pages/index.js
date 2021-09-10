@@ -84,7 +84,7 @@ export default function Home() {
         <div className={styles.grid}>
             
             {FetchOneResource("","ST")}
-            {skyTeamState && starAllianceStaten && oneWorldState?  getCurArrayElements("","") : ""}
+            {skyTeamState && starAllianceState && oneWorldState?  getCurArrayElements("","") : ""}
             {initState? "hello" : <CardContent
                 imageSrc={"/airline.svg"}
                 airlineName={"Brandon Hok"}
